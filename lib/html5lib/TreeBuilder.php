@@ -370,6 +370,8 @@ class HTML5_TreeBuilder {
                             if (!is_null($this->quirks_mode)) {
                                 break;
                             }
+                            // не ошибка так как идет проверка на разные режимы в html
+                            // appchecker CWE-798
                             if ($system === "http://www.ibm.com/data/dtd/v11/ibmxhtml1-transitional.dtd") {
                                 $this->quirks_mode = self::QUIRKS_MODE;
                                 break;
